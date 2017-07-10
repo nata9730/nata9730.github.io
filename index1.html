@@ -25,7 +25,7 @@
       }
 
       .pic_sls {
-        width:400px;
+        width:200px;
         margin-left: 25px;
         margin-right: 25px;
         content: ""
@@ -43,12 +43,14 @@
 
     var pics = [
       [
-        "https://3.bp.blogspot.com/-i15dBjBd1Rs/WWJY2VJeh2I/AAAAAAAAABU/jfrxzfXhrh0JFoI0Kp7RrEtXONfoSwElACLcBGAs/s1600/DSC_9255.JPG",
-"https://4.bp.blogspot.com/-mewNpyabI-o/WWJY1s-XJxI/AAAAAAAAABM/KJQopiQqrB8JVuNvOc6xI4q56MmmXDd_QCLcBGAs/s1600/DSC_9240.JPG "      
+        "https://4.bp.blogspot.com/-ixYUe3cp19o/WWJY15kaFlI/AAAAAAAAABQ/uutgKrSjY7kvdUXKMMOCVbUWok4dvQd3QCLcBGAs/s1600/DSC_9275.JPG", 
+        "https://3.bp.blogspot.com/-i15dBjBd1Rs/WWJY2VJeh2I/AAAAAAAAABU/jfrxzfXhrh0JFoI0Kp7RrEtXONfoSwElACLcBGAs/s1600/DSC_9255.JPG", 
+        "https://3.bp.blogspot.com/-3idlCinxZEc/WWI8gTCaNaI/AAAAAAAAAAo/NXwrmVjAhuctNQstVUmFMNIVfLPrkez0gCLcBGAs/s1600/DSC_9240.JPG"
       ], //id=0
-      [     
-        "https://3.bp.blogspot.com/-yJfEVVyP7as/WWJZA7oTnzI/AAAAAAAAABY/d1xkr2FpVx4b3mrvepUqA14J40NNWGuNwCLcBGAs/s1600/IMG_9502.JPG",
-"https://4.bp.blogspot.com/-R9KQqYv-H3A/WWJZCJ89TiI/AAAAAAAAABc/Pb_JBpo4Re8qYXR7hSTjsUDTrNdDkwW4gCLcBGAs/s1600/IMG_9497.JPG"
+      [
+        "https://1.bp.blogspot.com/-0O817KPEDzs/WWJZCXBAOqI/AAAAAAAAABg/qdUbpCic5E0fP0MYffXolzxNs9c9KRXDQCLcBGAs/s1600/IMG_9500.JPG", 
+        "https://4.bp.blogspot.com/-R9KQqYv-H3A/WWJZCJ89TiI/AAAAAAAAABc/Pb_JBpo4Re8qYXR7hSTjsUDTrNdDkwW4gCLcBGAs/s1600/IMG_9497.JPG",
+"https://3.bp.blogspot.com/-yJfEVVyP7as/WWJZA7oTnzI/AAAAAAAAABY/d1xkr2FpVx4b3mrvepUqA14J40NNWGuNwCLcBGAs/s1600/IMG_9502.JPG"
       ]  //id=1
     ];
 
@@ -73,7 +75,7 @@
 
       var feature = features[0];
       var piclist = pics[feature.properties.id];
-      var picsHTML = `<div class="pic_sls">${piclist.map(x=>"<img width=400 src='"+x+"' />").join("")}</div>`;
+      var picsHTML = `<div class="pic_sls">${piclist.map(x=>"<img width=200 src='"+x+"' />").join("")}</div>`;
       var popup = new mapboxgl.Popup({ offset: [0, -15] })
         .setLngLat(feature.geometry.coordinates)
         .setHTML(`<h3>Name: ${feature.properties.name}</h3>`+
