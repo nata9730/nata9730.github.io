@@ -80,6 +80,7 @@
         .setLngLat(feature.geometry.coordinates)
         .setHTML(`<h3>Name: ${feature.properties.name}</h3>`+
                  `<p>${feature.properties.description}</p>` +
+                 `<a href=${feature.properties.reference}>More</a>` +
                  picsHTML)
         .addTo(map);
 
